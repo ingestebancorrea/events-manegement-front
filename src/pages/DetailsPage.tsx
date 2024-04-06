@@ -26,7 +26,9 @@ export const Details = () => {
       <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", width: "100%" }}>
         <DetailsCard />
 
-        <Box sx={{ backgroundColor: "yellow", width: "60%" }}>
+        <Box sx={{ height: 20 }}></Box>
+
+        <Box sx={{ width: "60%" }}>
           <NearbyEventsMap  id={id}/>
         </Box>
       </Box>

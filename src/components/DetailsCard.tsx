@@ -14,40 +14,42 @@ export const DetailsCard = () => {
 
     return (
         <Box sx={{ display: "flex", width: "60%", paddingX: 1, gap: 2, flexWrap: "wrap" }}>
-            <Card key={event.id}>
-                <Box sx={{ display: 'flex' }}>
-                    <CardMedia
-                        component="img"
-                        alt="event"
-                        height="240"
-                        src={eventImage}
-                    />
-                    <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
-                            {event.name}
+            <Card key={event.id} sx={{
+                display: 'flex',
+                flexDirection: { xs: 'column', sm: 'row' },
+                alignItems: 'center' 
+            }}>
+                <CardMedia
+                    component="img"
+                    alt="event"
+                    height="240"
+                    src={eventImage}
+                />
+                <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                        {event.name}
+                    </Typography>
+
+                    <Box sx={{ display: "flex", alignItems: 'flex-start' }}>
+                        <Typography variant="body2" color="text.secondary">
+                            {event.description}
                         </Typography>
+                    </Box>
 
-                        <Box sx={{ display: "flex", alignItems: 'flex-start' }}>
-                            <Typography variant="body2" color="text.secondary">
-                                {event.description}
-                            </Typography>
-                        </Box>
+                    <Box sx={{ display: 'flex', alignItems: 'center', marginTop: 2 }}>
+                        <EventIcon sx={{ marginRight: 1 }} />
+                        <Typography variant="body1" color="text.third">
+                            {formatDate(event.date)}
+                        </Typography>
+                    </Box>
 
-                        <Box sx={{ display: 'flex', alignItems: 'center', marginTop: 2 }}>
-                            <EventIcon sx={{ marginRight: 1 }} />
-                            <Typography variant="body1" color="text.third">
-                                {formatDate(event.date)}
-                            </Typography>
-                        </Box>
-
-                        <Box sx={{ display: 'flex', alignItems: 'center', marginTop: 2 }}>
-                            <LocationOnIcon sx={{ marginRight: 1 }} />
-                            <Typography variant="body1" color="text.third">
-                                {event.location && event.location.name}
-                            </Typography>
-                        </Box>
-                    </CardContent>
-                </Box>
+                    <Box sx={{ display: 'flex', alignItems: 'center', marginTop: 2 }}>
+                        <LocationOnIcon sx={{ marginRight: 1 }} />
+                        <Typography variant="body1" color="text.third">
+                            {event.location && event.location.name}
+                        </Typography>
+                    </Box>
+                </CardContent>
             </Card>
         </Box>
     );

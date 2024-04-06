@@ -6,7 +6,7 @@ interface Props {
     id: string | undefined;
 }
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiaW5nZXN0ZWJhbmNvcnJlYTgiLCJhIjoiY2x1bGdldTQ2MDNqaTJqbzIwcm8wZzBqbSJ9.RPaN2jp1kPOpGX2z7AsUrQ';
+mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
 
 export const NearbyEventsMap = ({ id }: Props) => {
     const { fetchData, data } = useFetchData();

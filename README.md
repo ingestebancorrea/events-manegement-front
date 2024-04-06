@@ -48,5 +48,8 @@ VITE_EVENT_API=http://localhost:8000/api/  por  ejemplo
     ```bash
     npm run dev
 
+# Enlace explicación de front + integración con back
+https://drive.google.com/file/d/1ZvOKWc5FfpPL3ei7AXjeikNjmJM-EbND/view?usp=sharing
+
 # Licencia
 Este proyecto está bajo la Licencia MIT.

@@ -1,23 +1,37 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { EventState } from '../../interfaces/interfaces';
 
-const initialState = {
-  counter: 10,
+const initialState:EventState = {
+  events: [
+    {
+      id: '',
+      name: '',
+      description: '',
+      date: ''
+    }
+  ],
+  event: {
+    id: '',
+    name: '',
+    description: '',
+    date: ''
+  }
 }
 
 export const eventSlice = createSlice({
-  name: 'counter',
+  name: 'event',
   initialState,
   reducers: {
-    increment: (state) => {
-      state.counter += 1;
+    setEvent: (state, action) => {
+      state.events = action.payload;
     },
-    decrement: (state) => {
-      state.counter -= 1
-    }
+    setEventDetails: (state, action) => {
+      state.event = action.payload;
+    },
   },
 });
 
 export const {
-    increment,
-    decrement
+  setEvent,
+  setEventDetails
 } = eventSlice.actions;

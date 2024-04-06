@@ -1,30 +1,52 @@
-# React + TypeScript + Vite
+# Events Front
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+El siguiente proyecto posee las UI de eventos.
 
-Currently, two official plugins are available:
+### Requerimientos de software
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Se debe tener instalados los siguientes programas
 
-## Expanding the ESLint configuration
+- Node js
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- npm
 
-- Configure the top-level `parserOptions` property like this:
+### Configuración previa del proyecto
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+Antes de ejecutar el proyecto, asegúrate de renombrar y eliminar la extensión `.sample` de los siguientes archivos en el directorio raíz del proyecto:
+
+- .env.example
+
+Luego necesitamos remplazar el contenido del archivo .env de la siguiente forma:
+
+```bash
+
+VITE_EVENT_API={url de api}
+
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Cambiar {url de api} por la url correspondiente.
+
+```bash
+
+VITE_EVENT_API=http://localhost:8000/api/  por  ejemplo
+
+```
+
+## Configuración Proyecto
+1. Clona el repositorio en tu máquina local:
+
+   ```bash
+   git clone https://github.com/ingestebancorrea/events-manegement-front.git
+
+2. Instalación de Dependencias
+    Después de clonar el repositorio y realizar la configuración previa, instala las dependencias del proyecto ejecutando el siguiente comando en tu terminal dentro del directorio del proyecto:
+
+    ```bash
+    npm install 
+
+3. Ejecutar proyecto con el siguiente comando:
+    ```bash
+    npm run dev
+
+# Licencia
+Este proyecto está bajo la Licencia MIT.
